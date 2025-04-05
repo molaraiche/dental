@@ -7,18 +7,18 @@ import { MdPhoneInTalk } from "react-icons/md";
 export default function Hero() {
   const t = useTranslations("Home");
   return (
-    <section className='h-[70vh] flex items-center justify-center gap-10 container mx-auto font-general'>
-      <div className='w-1/2'>
+    <section className='h-[70vh] flex items-center justify-center gap-10 container mx-auto font-general my-72 sm:my-20 lg:my-32'>
+      <div className='w-full lg:w-1/2 px-3'>
         <h1 className='text-6xl font-semibold text-dark-blue-design'>
           {t("title")}
           <span className='text-sky-blue-design'> {t("marked")} </span>
         </h1>
-        <p className='text-body w-[531px] my-10'>{t("paragraph")}</p>
-        <div className='flex gap-3 my-10'>
-          <Button className='bg-mid-blue-design w-[227px] h-[55px] rounded-[10px] text-secondary'>
+        <p className='text-body w-full md:w-[531px] my-10'>{t("paragraph")}</p>
+        <div className='flex flex-col gap-3 my-10'>
+          <Button className='bg-mid-blue-design w-full md:w-[227px] h-[55px] rounded-[10px] text-secondary'>
             {t("btn1")}
           </Button>
-          <Button className='h-[55px] rounded-[10px] text-secondary flex items-center shadow-none'>
+          <Button className='w-full md:w-fit h-[55px] rounded-[10px] text-secondary flex items-center shadow-none'>
             <span className='border border-[#25B4F8] flex items-center justify-center w-[50px] h-[50px] rounded-[10px]'>
               <MdPhoneInTalk className=' bg-[#E6F6FE] text-mid-blue-design w-11 h-11' />
             </span>
@@ -30,9 +30,11 @@ export default function Hero() {
             </span>
           </Button>
         </div>
-        <LinkedInCard />
+        <div className='flex items-center justify-center'>
+          <LinkedInCard />
+        </div>{" "}
       </div>
-      <div className='w-1/2'>
+      <div className=' w-1/2 hidden lg:flex'>
         <Image
           src='/assets/hero.svg'
           alt='hero img'

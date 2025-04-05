@@ -3,7 +3,7 @@ import Image from "next/image";
 const DocOnline = () => {
   const docAvailable = false;
   return (
-    <div className='relative'>
+    <div className='relative hidden md:flex'>
       <Image
         src='/assets/doc.svg'
         width={50}

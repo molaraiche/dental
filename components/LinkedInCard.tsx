@@ -7,7 +7,7 @@ const LinkedInCard = () => {
   const t = useTranslations("quote");
 
   return (
-    <div className='shadow-lg w-[374px] h-auto p-2.5 rounded-2xl my-12'>
+    <div className='shadow-lg w-[90%] md:w-[374px] h-auto p-2.5 rounded-2xl my-12'>
       <div className='flex items-center justify-between'>
         <div className='flex items-center gap-2'>
           <Image

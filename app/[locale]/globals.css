@@ -11,3 +11,7 @@
   --font-poppins: var(--font-poppins);
   --shadow-drop: 0 8.33 41.67 0 rgba(0, 0, 0, .8);
 }
+
+html {
+  overflow-x: hidden;
+}

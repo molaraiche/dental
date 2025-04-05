@@ -8,7 +8,6 @@
   --color-body: #3c4959;
   --color-succes: #17bf28;
   --color-error: #e52323;
-  
-  --font-general: var(--font-generalSans);
-  --font-archivo: var(--font-archivo);
+  --font-poppins: var(--font-poppins);
+  --shadow-drop: 0 8.33 41.67 0 rgba(0, 0, 0, .8);
 }

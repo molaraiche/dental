@@ -1,10 +1,21 @@
 {
-  "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+  "Home": {
+    "title": " Get Ready for your best every",
+    "paragraph": "We use only the best quality materials on the market in order to provide the best products to our patients, So don't worry aboutanything and book yourself.",
+    "marked": "Dental Experience",
+    "btn1": "Book an appointement",
+    "btn2": "Dental 24H Emergency"
   },
-  "AboutPage": {
-    "title": "About",
-    "description": "This is the about page."
+  "Nav": {
+    "1": "Home",
+    "2": "Services",
+    "3": "Blogs",
+    "4": "About",
+    "5": "Contact"
+  },
+  "book": "Book Now",
+  "quote": {
+    "docQuote": "Top quality dental treatment done by field experts, Highly Recommended for everyone",
+    "role": "Sr Dental"
   }
 }

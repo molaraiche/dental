@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const DocOnline = () => {
   const docAvailable = false;
   return (
-    <div className='relative hidden md:flex'>
+    <Link href='/admin' className='relative hidden md:flex'>
       <Image
         src='/assets/doc.svg'
         width={50}
@@ -15,7 +16,7 @@ const DocOnline = () => {
         className={`w-4 h-4 rounded-full absolute top-0 right-0 ${
           docAvailable ? "bg-green-500" : "bg-red-500"
         }`}></div>
-    </div>
+    </Link>
   );
 };
 

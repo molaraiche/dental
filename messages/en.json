@@ -17,5 +17,16 @@
   "quote": {
     "docQuote": "Top quality dental treatment done by field experts, Highly Recommended for everyone",
     "role": "Sr Dental"
+  },
+  "formHolder": {
+    "title": "Make your book now",
+    "form": {
+      "name": "Full Name",
+      "phone": "Phone Number",
+      "email": "Email",
+      "message": "Message",
+      "date": "Date and Time",
+      "send": "Send"
+    }
   }
 }

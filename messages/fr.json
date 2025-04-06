@@ -17,5 +17,16 @@
   "quote": {
     "docQuote": "Top quality dental treatment done by field experts, Highly Recommended for everyone",
     "role": "Dentiste senior"
+  },
+  "formHolder": {
+    "title": "Faites votre réservation maintenant",
+    "form": {
+      "name": "Nom et prénom",
+      "phone": "Numéro de téléphone",
+      "email": "E-mail",
+      "message": "Message",
+      "date": "Date et heure",
+      "send": "Envoyer"
+    }
   }
 }

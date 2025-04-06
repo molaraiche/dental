@@ -3,7 +3,13 @@ import { Button } from "@/components/ui/button";
 import LinkedInCard from "@/components/LinkedInCard";
 import Image from "next/image";
 import { MdPhoneInTalk } from "react-icons/md";
-
+import {
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalTrigger,
+} from "@/components/ui/animated-modal";
+import BookFrom from "@/components/BookFrom";
 export default function Hero() {
   const t = useTranslations("Home");
   return (
@@ -15,9 +21,18 @@ export default function Hero() {
         </h1>
         <p className='text-body w-full md:w-[531px] my-10'>{t("paragraph")}</p>
         <div className='flex flex-col md:flex-row gap-3 my-10'>
-          <Button className='bg-mid-blue-design w-full md:w-[300px] h-[55px] rounded-[10px] text-secondary'>
-            {t("btn1")}
-          </Button>
+          <Modal>
+            <ModalTrigger className='bg-mid-blue-design w-full md:w-[300px] h-[55px] rounded-[10px] text-secondary cursor-pointer'>
+              {t("btn1")}
+            </ModalTrigger>
+
+            <ModalBody>
+              <ModalContent>
+                <BookFrom />
+              </ModalContent>
+            </ModalBody>
+          </Modal>
+
           <Button className=' w-full md:w-[300px] h-[55px] rounded-[10px]  text-secondary flex items-center '>
             <span className='border border-[#25B4F8] flex items-center justify-center w-[50px] h-[50px] rounded-[10px]'>
               <MdPhoneInTalk className=' bg-[#E6F6FE] text-mid-blue-design w-11 h-11' />

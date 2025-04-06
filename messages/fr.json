@@ -28,5 +28,11 @@
       "date": "Date et heure",
       "send": "Envoyer"
     }
+  },
+  "admin": {
+    "title": "Tableau de bord administrateur",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "submit": "Soumettre"
   }
 }

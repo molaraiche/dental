@@ -18,7 +18,7 @@ const Select = () => {
     <div className='flex items-center justify-center'>
       <select
         onChange={(e) => handleChange(e.target.value)}
-        className='border border-sky-blue-design rounded-md p-1.5'
+        className='border border-sky-blue-design rounded-md p-1.5 bg-sky-blue-design text-secondary'
         defaultValue={currentLocale}>
         <option value='en'>EN</option>
         <option value='fr'>FR</option>

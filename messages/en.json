@@ -28,5 +28,11 @@
       "date": "Date and Time",
       "send": "Send"
     }
+  },
+  "admin": {
+    "title": "Admin Dashboard",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Submit"
   }
 }

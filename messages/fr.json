@@ -34,5 +34,8 @@
     "email": "E-mail",
     "password": "Mot de passe",
     "submit": "Soumettre"
+  },
+  "submitForBook": {
+    "msg": "La demande de réservation a été envoyée ; en attente de rappel du médecin"
   }
 }

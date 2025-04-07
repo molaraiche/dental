@@ -34,5 +34,8 @@
     "email": "Email",
     "password": "Password",
     "submit": "Submit"
-  }
+  },
+  "submitForBook":{
+    "msg":"The Booking request has been sent, waiting for the doctor to call you back."
+  }  
 }

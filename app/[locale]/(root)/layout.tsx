@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import { Bounce, ToastContainer } from "react-toastify";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -34,6 +35,19 @@ export default async function LocaleLayout({
         <NextIntlClientProvider>
           <Navbar />
           {children}
+          <ToastContainer
+            position='bottom-right'
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick={false}
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme='light'
+            transition={Bounce}
+          />
         </NextIntlClientProvider>
       </body>
     </html>

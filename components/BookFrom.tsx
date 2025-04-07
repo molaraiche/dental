@@ -7,6 +7,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import { Button } from "./ui/button";
 import { useTranslations } from "next-intl";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 interface formType {
   name: string;
@@ -61,6 +62,7 @@ const BookForm = () => {
 
     return newErrors;
   };
+  const d = useTranslations("submitForBook");
 
   const submitHandler = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -78,6 +80,7 @@ const BookForm = () => {
       }
     );
     console.log({ "the booking has been sent!": addToForm });
+    toast.success(d("msg"));
     setForm({
       name: "",
       email: "",

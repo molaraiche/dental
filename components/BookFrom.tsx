@@ -6,9 +6,10 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Button } from "./ui/button";
 import { useTranslations } from "next-intl";
+import axios from "axios";
 
 interface formType {
-  fullName: string;
+  name: string;
   email: string;
   phone: string;
   date: Date | null;
@@ -16,7 +17,7 @@ interface formType {
 }
 
 interface errorType {
-  fullName?: string;
+  name?: string;
   email?: string;
   phone?: string;
   date?: string;
@@ -25,7 +26,7 @@ interface errorType {
 
 const BookForm = () => {
   const [form, setForm] = useState<formType>({
-    fullName: "",
+    name: "",
     email: "",
     phone: "",
     date: null,
@@ -45,7 +46,7 @@ const BookForm = () => {
   const validate = (): errorType => {
     const newErrors: errorType = {};
 
-    if (!form.fullName.trim()) newErrors.fullName = "Full name is required";
+    if (!form.name.trim()) newErrors.name = "Full name is required";
     if (!form.message.trim()) newErrors.message = "Message is required";
     if (!form.date) newErrors.date = "Date is required";
 
@@ -61,7 +62,7 @@ const BookForm = () => {
     return newErrors;
   };
 
-  const submitHandler = (e: React.FormEvent) => {
+  const submitHandler = async (e: React.FormEvent) => {
     e.preventDefault();
     const validationErrors = validate();
     setErrors(validationErrors);
@@ -69,6 +70,21 @@ const BookForm = () => {
     if (Object.keys(validationErrors).length > 0) return;
 
     console.log("Form submitted:", form);
+    const addToForm = await axios.post(
+      "https://api-dental.molaraiche.com/api/booking/demandBook",
+      form,
+      {
+        withCredentials: true,
+      }
+    );
+    console.log({ "the booking has been sent!": addToForm });
+    setForm({
+      name: "",
+      email: "",
+      phone: "",
+      date: null,
+      message: "",
+    });
     setErrors({});
   };
   const t = useTranslations("formHolder");
@@ -82,14 +98,15 @@ const BookForm = () => {
           </label>
           <input
             type='text'
-            id='fullName'
-            name='fullName'
+            id='name'
+            name='name'
+            value={form.name}
             placeholder={t("form.name")}
             onChange={changeHandler}
             className='h-10 w-full p-2.5 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-500'
           />
-          {errors.fullName && (
-            <span className='text-red-500 text-sm pl-2'>{errors.fullName}</span>
+          {errors.name && (
+            <span className='text-red-500 text-sm pl-2'>{errors.name}</span>
           )}
         </div>
 
@@ -122,6 +139,7 @@ const BookForm = () => {
             type='email'
             id='email'
             name='email'
+            value={form.email}
             placeholder={t("form.email")}
             onChange={changeHandler}
             className='h-10 w-full p-2.5 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-500'
@@ -138,6 +156,7 @@ const BookForm = () => {
           <textarea
             id='message'
             name='message'
+            value={form.message}
             onChange={changeHandler}
             placeholder={t("form.message")}
             className='w-full p-2.5 rounded border h-16 max-h-28 border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-500'
@@ -163,6 +182,7 @@ const BookForm = () => {
             showTimeSelect
             timeFormat='HH:mm'
             timeIntervals={15}
+            value={form.date as unknown as string}
             dateFormat='Pp'
             placeholderText={t("form.date")}
             className='h-10 w-full p-2.5 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-500'

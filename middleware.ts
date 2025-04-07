@@ -1,24 +1,34 @@
 import createMiddleware from "next-intl/middleware";
-import { routing } from "./app/i18n/routing";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { routing } from "@/app/i18n/routing";
 
-export default createMiddleware(routing);
+const intlMiddleware = createMiddleware(routing);
 
 export function middleware(request: NextRequest) {
-  const token = request.cookies.get("token");
+  const token = request.cookies.get("token")?.value;
+  const { pathname } = request.nextUrl;
 
-  // Check if the request is for protected admin/dashboard routes
-  if (request.nextUrl.pathname.startsWith("/admin/dashboard")) {
-    // If no token, redirect to admin login page
+  const localePrefix = `/${routing.locales.find((loc) =>
+    pathname.startsWith(`/${loc}`)
+  )}`;
+  const pathWithoutLocale = pathname.startsWith(localePrefix)
+    ? pathname.replace(localePrefix, "") || "/"
+    : pathname;
+
+  if (pathWithoutLocale.startsWith("/admin/dashboard")) {
     if (!token) {
-      return NextResponse.redirect(new URL("/admin", request.url));
+      return NextResponse.redirect(
+        new URL(`${localePrefix}/admin`, request.url)
+      );
     }
   }
-
-  // Allow other requests to pass through
-  return NextResponse.next();
+  return intlMiddleware(request);
 }
+
 export const config = {
-  matcher: ["/admin/dashboard/:path*", "/admin/dashboard"],
+  matcher: [
+    "/((?!api|trpc|_next|_vercel|.*\\..*).*)",
+    "/:locale/admin/dashboard/:path*",
+  ],
 };

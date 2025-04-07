@@ -71,7 +71,6 @@ const BookForm = () => {
 
     if (Object.keys(validationErrors).length > 0) return;
 
-    console.log("Form submitted:", form);
     const addToForm = await axios.post(
       "https://api-dental.molaraiche.com/api/booking/demandBook",
       form,
@@ -79,7 +78,6 @@ const BookForm = () => {
         withCredentials: true,
       }
     );
-    console.log({ "the booking has been sent!": addToForm });
     toast.success(d("msg"));
     setForm({
       name: "",

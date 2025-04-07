@@ -28,7 +28,7 @@ const Admin = () => {
         { email: form.email, password: form.password }
       );
       const { token } = await response.data;
-      console.log("Token:", token);
+     
       Cookies.set("token", token, {
         expires: 30,
         secure: true,

@@ -35,7 +35,25 @@
     "password": "Password",
     "submit": "Submit"
   },
-  "submitForBook":{
-    "msg":"The Booking request has been sent, waiting for the doctor to call you back."
-  }  
+  "submitForBook": {
+    "msg": "The Booking request has been sent, waiting for the doctor to call you back."
+  },
+  "dashboard": {
+    "greeting": "Good Morning Dr",
+    "docName": "Jhon Doe",
+    "requestsNumber": "New Booking Requests",
+    "noReqYet": "There is No booking requests yet",
+    "name": "Full Name",
+    "date": "Date Asked",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "status": "Status",
+    "pending": "pending",
+    "approved": "approved",
+    "rejected": "rejected",
+    "noPhone": "Patient didn't add any Phone Number",
+    "noMail": "Patient didn't add any email",
+    "logout": "Logout"
+  }
 }

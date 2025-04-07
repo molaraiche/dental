@@ -37,5 +37,23 @@
   },
   "submitForBook": {
     "msg": "La demande de réservation a été envoyée ; en attente de rappel du médecin"
+  },
+  "dashboard": {
+    "greeting": "Bonjour docteur",
+    "docName": "Jhon Doe",
+    "requestsNumber": "Nouvelles demandes de réservation",
+    "noReqYet": "Il n'y a pas encore de demande de réservation",
+    "name": "Nom et prénom",
+    "date": "Date demandée",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "message": "Message",
+    "status": "Statut",
+    "pending": "en attente",
+    "approved": "approuvé",
+    "rejected": "rejeté",
+    "noPhone": "Le patient n'a ajouté aucun numéro de téléphone",
+    "noMail": "Le patient n'a ajouté aucune adresse e-mail",
+    "logout": "Déconnexion"
   }
 }

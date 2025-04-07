@@ -86,12 +86,12 @@ const Admin = () => {
         <div className='flex items-center justify-center gap-4 mt-5'>
           <Link
             href='/'
-            className='bg-dark-blue-design  text-secondary px-4 py-2 rounded hover:opacity-80'>
+            className='bg-dark-blue-design  text-secondary px-4 py-2 rounded hover:opacity-80 cursor-pointer'>
             Back
           </Link>
           <button
             type='submit'
-            className='px-4 py-2 curosr-pointer bg-sky-blue-design text-white rounded hover:opacity-80'>
+            className='px-4 py-2 curosr-pointer bg-sky-blue-design text-white rounded hover:opacity-80 cursor-pointer'>
             {t("submit")}
           </button>
         </div>

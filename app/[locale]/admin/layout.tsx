@@ -4,6 +4,7 @@ import { routing } from "@/app/i18n/routing";
 import type { Metadata } from "next";
 import "../(root)/globals.css";
 import { Poppins } from "next/font/google";
+import { Bounce, ToastContainer } from "react-toastify";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -30,7 +31,22 @@ export default async function LocaleLayout({
   return (
     <html>
       <body className={` ${poppins.variable} antialiased font-poppins`}>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          {children}
+          <ToastContainer
+            position='bottom-right'
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick={false}
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme='light'
+            transition={Bounce}
+          />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

@@ -71,7 +71,7 @@ const BookForm = () => {
 
     if (Object.keys(validationErrors).length > 0) return;
 
-    const addToForm = await axios.post(
+    await axios.post(
       "https://api-dental.molaraiche.com/api/booking/demandBook",
       form,
       {

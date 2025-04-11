@@ -13,7 +13,7 @@ import BookFrom from "@/components/BookFrom";
 export default function Hero() {
   const t = useTranslations("Home");
   return (
-    <section className='h-[60vh] flex items-center justify-center gap-10 container mx-auto font-general my-72 sm:my-20 lg:my-32'>
+    <section className='h-[60vh] flex items-center justify-center gap-10 container mx-auto font-general my-72 sm:my-44 lg:my-32'>
       <div className='w-[90%] lg:w-1/2 px-3'>
         <h1 className='text-6xl font-semibold text-dark-blue-design'>
           {t("title")}

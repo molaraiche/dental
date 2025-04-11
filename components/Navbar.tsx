@@ -14,14 +14,14 @@ const Navbar = () => {
   const menuHandler = () => setMenu(!menu);
   const closeMenu = () => setMenu(false);
   return (
-    <div className='bg-[#E6F6FE] flex items-center justify-between container mx-auto w-[90%] px-1 sm:px-4 lg:px-4 py-2 rounded-[10px] my-10 font-general'>
+    <div className='bg-[#E6F6FE] flex items-center justify-between container mx-auto px-1 sm:px-4 lg:px-4 py-2 rounded-[10px] my-10 font-general'>
       <h1
         onClick={closeMenu}
         className='font-bold uppercase text-dark-blue-design text-2xl'>
         Dental
       </h1>
       <nav
-        className={`flex items-center gap-4 bg-sky-blue-design absolute top-[15vh] right-0 flex-col w-full left-0 h-[70vh] justify-evenly ease-in-out duration-150 ${
+        className={` md:translate-x-0 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-4 absolute md:static top-[15vh] left-0 right-0 bg-sky-blue-design md:bg-transparent h-[60vh] md:h-fit w-full ease-in-out duration-200 z-10 ${
           menu ? "translate-x-0" : "-translate-x-[200%]"
         } `}>
         <Link
@@ -55,10 +55,10 @@ const Navbar = () => {
           {t("5")}
         </Link>
       </nav>
-      <div className='flex items-center gap-4'>
+      <div className='flex gap-4 items-center'>
         <BookNow />
         <Select />
-        <DocOnline />
+        <DocOnline menu={menu} />
         <div className='flex lg:hidden'>
           {menu ? (
             <IoClose

@@ -12,7 +12,7 @@ const BookNow = () => {
 
   return (
     <Modal>
-      <ModalTrigger className='bg-mid-blue-design text-secondary flex items-center gap-1 cursor-pointer'>
+      <ModalTrigger className='bg-mid-blue-design text-secondary flex items-center justify-center gap-2 md:w-[150px]'>
         <CiBookmark />
         <span className='hidden md:flex'>{t("book")}</span>
       </ModalTrigger>

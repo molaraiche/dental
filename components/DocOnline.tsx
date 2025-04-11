@@ -1,21 +1,15 @@
-import Image from "next/image";
 import Link from "next/link";
+import { FaRegUser } from "react-icons/fa";
 
 const DocOnline = () => {
-  const docAvailable = false;
   return (
-    <Link href='/admin' className='relative hidden md:flex'>
-      <Image
-        src='/assets/doc.svg'
-        width={50}
-        height={50}
-        className='object-cover'
-        alt='Is Doctor Available ?'
+    <Link
+      href='/admin'
+      className=' flex gap-2 px-2 py-2.5 rounded items-center bg-sky-blue-design text-secondary'>
+      <FaRegUser
+        className='w-4 h-4  bg-sky-blue-design text-secondary'
+        title='Admin dashboard login page'
       />
-      <div
-        className={`w-4 h-4 rounded-full absolute top-0 right-0 ${
-          docAvailable ? "bg-green-500" : "bg-red-500"
-        }`}></div>
     </Link>
   );
 };

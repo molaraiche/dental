@@ -18,7 +18,7 @@ const Navbar = () => {
       <h1
         onClick={closeMenu}
         className='font-bold uppercase text-dark-blue-design text-2xl'>
-        DDD
+        Dental
       </h1>
       <nav
         className={`flex items-center gap-4 bg-sky-blue-design absolute top-[15vh] right-0 flex-col w-full left-0 h-[70vh] justify-evenly ease-in-out duration-150 ${
@@ -56,9 +56,9 @@ const Navbar = () => {
         </Link>
       </nav>
       <div className='flex items-center gap-4'>
-        <DocOnline />
         <BookNow />
         <Select />
+        <DocOnline />
         <div className='flex lg:hidden'>
           {menu ? (
             <IoClose

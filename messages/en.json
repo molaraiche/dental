@@ -39,7 +39,7 @@
     "msg": "The Booking request has been sent, waiting for the doctor to call you back."
   },
   "dashboard": {
-    "greeting": "Good Morning Dr",
+    "greeting": "Good Morning Dr.",
     "docName": "Jhon Doe",
     "requestsNumber": "New Booking Requests",
     "noReqYet": "There is No booking requests yet",

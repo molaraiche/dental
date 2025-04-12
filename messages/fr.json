@@ -39,7 +39,7 @@
     "msg": "La demande de réservation a été envoyée ; en attente de rappel du médecin"
   },
   "dashboard": {
-    "greeting": "Bonjour docteur",
+    "greeting": "Bonjour Dr.",
     "docName": "Jhon Doe",
     "requestsNumber": "Nouvelles demandes de réservation",
     "noReqYet": "Il n'y a pas encore de demande de réservation",

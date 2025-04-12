@@ -4,7 +4,7 @@ import { FaRegUser } from "react-icons/fa";
 const DocOnline = ({ menu }: { menu: boolean }) => {
   return (
     <div
-      className={`flex flex-col items-center justify-center gap-4 absolute right-0 left-0 md:static z-20 top-[68vh]
+      className={`flex flex-col items-center justify-center gap-4 absolute  md:static right-0 left-0 z-20 top-[68vh] -translate-x-[200%] md:translate-x-0
          ease-in-out duration-200 ${
            menu ? "translate-x-0" : "-translate-x-[200%]"
          }  `}>

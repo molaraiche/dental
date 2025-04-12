@@ -13,10 +13,10 @@ const Logout = () => {
     router.push("/admin");
   };
   return (
-    <div className='text-brand-white relative w-full'>
+    <div className='text-brand-white w-full flex items-center justify-center md:justify-end'>
       <button
         onClick={handleLogout}
-        className='absolute bg-red-500 text-secondary bottom-10 right-10 w-36 h-12 rounded-[10px] z-50 flex items-center justify-center gap-2 font-medium cursor-pointer'>
+        className='bg-red-500 text-secondary bottom-10 right-10 w-36 h-12 rounded-[10px] z-50 flex items-center justify-center gap-2 font-medium cursor-pointer'>
         <CiLogout className='w-6 h-6' />
         <span>{t("logout")}</span>
       </button>

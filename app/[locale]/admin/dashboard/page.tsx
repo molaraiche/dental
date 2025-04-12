@@ -30,8 +30,8 @@ const Dashboard = async () => {
 
   return (
     <section className='container mx-auto px-4 font-poppins'>
-      <div className='h-[10vh] flex items-center justify-between text-xl md:text-4xl font-medium'>
-        <h2>
+      <div className='h-[10vh] flex items-center justify-between '>
+        <h2 className='text-xl md:text-4xl font-medium'>
           {t("greeting")}
           <span className='text-sky-blue-design font-semibold mx-1'>
             {t("docName")}
@@ -59,7 +59,7 @@ const Dashboard = async () => {
           </div>
         </div>
       </div>
-      <div className='h-[70vh]'>
+      <div className='min-h-[70vh] w-full overflow-x-auto'>
         {books.length > 0 ? (
           <div className=''>
             <table className='w-full border-collapse bg-white text-left text-sm text-gray-500'>
@@ -157,8 +157,8 @@ const Dashboard = async () => {
           </div>
         )}
       </div>
-      <div className='h-[10vh]'>
-        <div className='flex items-center gap-3'>
+      <div className='h-[10vh] flex items-center flex-col-reverse md:flex-row justify-center gap-3'>
+        <div className='flex items-center justify-center gap-3'>
           <Link href='/' target='_blank' title='Website Link'>
             <TiWorld className='w-6 h-6 text-dark-blue-design hover:scale-150 ease-in-out duration-200 hover:text-sky-blue-design' />
           </Link>

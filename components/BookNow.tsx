@@ -17,7 +17,7 @@ const BookNow = () => {
         <span className='hidden md:flex'>{t("book")}</span>
       </ModalTrigger>
 
-      <ModalBody>
+      <ModalBody className='w-[80%] mx-10 rounded'>
         <ModalContent>
           <BookFrom />
         </ModalContent>

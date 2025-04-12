@@ -91,10 +91,10 @@ const BookForm = () => {
   const t = useTranslations("formHolder");
   return (
     <div className='flex flex-col items-center justify-center'>
-      <h1 className='text-4xl text-center font-bold my-4'> {t("title")} </h1>
+      <h1 className='text-2xl md:text-4xl text-center font-bold my-4'> {t("title")} </h1>
       <form className='w-full' onSubmit={submitHandler}>
         <div className='flex flex-col my-2'>
-          <label htmlFor='fullName' className='pl-2 font-medium'>
+          <label htmlFor='fullName' className='pl-2 font-medium hidden md:flex'>
             {t("form.name")}
           </label>
           <input
@@ -112,7 +112,7 @@ const BookForm = () => {
         </div>
 
         <div className='flex flex-col my-2'>
-          <label htmlFor='phoneNumber' className='pl-2 font-medium'>
+          <label htmlFor='phoneNumber' className='pl-2 font-medium hidden md:flex'>
             {t("form.phone")}
           </label>
           <PhoneInput
@@ -133,7 +133,7 @@ const BookForm = () => {
         </div>
 
         <div className='flex flex-col my-2'>
-          <label htmlFor='email' className='pl-2 font-medium'>
+          <label htmlFor='email' className='pl-2 font-medium hidden md:flex'>
             {t("form.email")}
           </label>
           <input
@@ -151,7 +151,7 @@ const BookForm = () => {
         </div>
 
         <div className='flex flex-col my-2'>
-          <label htmlFor='message' className='pl-2 font-medium'>
+          <label htmlFor='message' className='pl-2 font-medium hidden md:flex'>
             {t("form.message")}
           </label>
           <textarea
@@ -168,7 +168,7 @@ const BookForm = () => {
         </div>
 
         <div className='flex flex-col my-2'>
-          <label htmlFor='date' className='pl-2 font-medium'>
+          <label htmlFor='date' className='pl-2 font-medium hidden md:flex'>
             {t("form.date")}
           </label>
           <DatePicker

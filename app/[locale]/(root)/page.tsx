@@ -22,7 +22,7 @@ export default function Hero() {
         <p className='text-body w-full md:w-[531px] my-10'>{t("paragraph")}</p>
         <div className='flex flex-col md:flex-row gap-3 my-10'>
           <Modal>
-            <ModalTrigger className='bg-mid-blue-design w-full md:w-[300px] h-[55px] rounded-[10px] text-secondary cursor-pointer'>
+            <ModalTrigger className='bg-mid-blue-design w-full md:w-[300px] h-[55px] rounded-[10px] text-secondary cursor-pointer bookBtn'>
               {t("btn1")}
             </ModalTrigger>
 

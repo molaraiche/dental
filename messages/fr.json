@@ -33,7 +33,8 @@
     "title": "Tableau de bord administrateur",
     "email": "E-mail",
     "password": "Mot de passe",
-    "submit": "Soumettre"
+    "submit": "Soumettre",
+    "back": "Retour"
   },
   "submitForBook": {
     "msg": "La demande de réservation a été envoyée ; en attente de rappel du médecin"

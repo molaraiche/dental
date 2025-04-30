@@ -28,7 +28,7 @@ const Admin = () => {
         { email: form.email, password: form.password }
       );
       const { token } = await response.data;
-     
+
       Cookies.set("token", token, {
         expires: 30,
         secure: true,
@@ -40,58 +40,63 @@ const Admin = () => {
     }
   };
   return (
-    <section className='admin h-screen flex justify-center items-center w-full flex-col font-poppins'>
-      <div className=''>
+    <section className="admin h-screen flex justify-center items-center w-full flex-col font-poppins">
+      <div className="">
         <Select />
       </div>
-      <div className='flex items-center justify-center my-10'>
-        <h1 className='text-5xl font-bold text-secondary text-center'>
+      <div className="flex items-center justify-center my-10">
+        <h1 className="text-5xl font-bold text-secondary text-center">
           {t("title")}
         </h1>
       </div>
       <form
         onSubmit={loginHandler}
-        className='bg-white/30 backdrop-blur-lg p-8 rounded-lg shadow-lg w-[90%] md:w-[40%]'>
-        <div className='mb-4'>
+        className="bg-white/30 backdrop-blur-lg p-8 rounded-lg shadow-lg w-[90%] md:w-[40%]"
+      >
+        <div className="mb-4">
           <label
-            htmlFor='email'
-            className='block text-sm font-medium text-secondary'>
+            htmlFor="email"
+            className="block text-sm font-medium text-secondary"
+          >
             {t("email")}
           </label>
           <input
-            id='email'
-            name='email'
+            id="email"
+            name="email"
             onChange={changeHandler}
             value={form.email}
-            placeholder=''
-            type='email'
-            className='mt-1 block w-full p-2 border border-gray-300 text-secondary rounded-md focus:outline-none focus:ring-2 focus:ring-sky-blue-design outline-none'
+            placeholder=""
+            type="email"
+            className="mt-1 block w-full p-2 border border-gray-300 text-secondary rounded-md focus:outline-none focus:ring-2 focus:ring-sky-blue-design outline-none"
           />
         </div>
-        <div className='mb-4'>
+        <div className="mb-4">
           <label
-            htmlFor='password'
-            className='block text-sm font-medium text-secondary'>
+            htmlFor="password"
+            className="block text-sm font-medium text-secondary"
+          >
             {t("password")}
           </label>
           <input
-            id='password'
-            name='password'
+            id="password"
+            name="password"
             onChange={changeHandler}
             value={form.password}
-            type='password'
-            className='mt-1 block w-full p-2 border border-gray-300 text-secondary rounded-md focus:outline-none focus:ring-2 focus:ring-sky-blue-design outline-none'
+            type="password"
+            className="mt-1 block w-full p-2 border border-gray-300 text-secondary rounded-md focus:outline-none focus:ring-2 focus:ring-sky-blue-design outline-none"
           />
         </div>
-        <div className='flex items-center justify-center gap-4 mt-5'>
+        <div className="flex items-center justify-center gap-4 mt-5">
           <Link
-            href='/'
-            className='bg-dark-blue-design  text-secondary px-4 py-2 rounded hover:opacity-80 cursor-pointer'>
-            Back
+            href="/"
+            className="bg-dark-blue-design  text-secondary px-4 py-2 rounded hover:opacity-80 cursor-pointer"
+          >
+            {t("back")}
           </Link>
           <button
-            type='submit'
-            className='px-4 py-2 curosr-pointer bg-sky-blue-design text-white rounded hover:opacity-80 cursor-pointer'>
+            type="submit"
+            className="px-4 py-2 curosr-pointer bg-sky-blue-design text-white rounded hover:opacity-80 cursor-pointer"
+          >
             {t("submit")}
           </button>
         </div>

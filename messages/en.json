@@ -33,7 +33,8 @@
     "title": "Admin Dashboard",
     "email": "Email",
     "password": "Password",
-    "submit": "Submit"
+    "submit": "Submit",
+    "back": "Back"
   },
   "submitForBook": {
     "msg": "The Booking request has been sent, waiting for the doctor to call you back."
